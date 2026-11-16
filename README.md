@@ -25,6 +25,8 @@ An AI-powered Security Operations Center (SOC) alert triage agent built with **L
 |------|---------|
 | `analyse_event_fields` | Inspects raw Windows event fields (process, command line, user, EventID) for suspicious indicators |
 | `lookup_technique` | Looks up MITRE ATT&CK technique details from a local database (28 techniques) |
+| `check_ip_reputation` | Classifies IP addresses (RFC1918 private, loopback, public) for network-based alerts |
+| `enrich_user_context` | Identifies SYSTEM, service accounts, machine accounts, and admin users |
 
 ## Project Structure
 
@@ -46,7 +48,7 @@ An AI-powered Security Operations Center (SOC) alert triage agent built with **L
 ├── data/
 │   ├── attack_techniques.json  # MITRE ATT&CK technique database
 │   └── golden_set/             # Labeled alerts (160: 32 malicious, 128 benign)
-├── tests/                      # 63 tests (schemas, tools, agent, eval, API)
+├── tests/                      # 136 tests (schemas, tools, agent, eval, API, sigma matcher)
 ├── Dockerfile                  # Multi-stage (production + test targets)
 ├── docker-compose.yml          # Agent service + test profile
 └── .github/workflows/ci.yml    # GitHub Actions (lint + test)
@@ -123,6 +125,28 @@ make eval-full     # full golden set (160 alerts)
 
 Produces precision, recall, F1, false-alarm rate, severity accuracy, and per-alert latency.
 
+### Live Evaluation Results (Dev Set — 10 alerts)
+
+| Metric | Value |
+|--------|-------|
+| Precision | **75%** |
+| Severity Accuracy | **100%** |
+| Recall | 42.9% |
+| F1 | 0.545 |
+| False Alarm Rate | 2.2% |
+
+## API Authentication
+
+Set `TRIAGE_API_KEY` to enable API key auth. Pass the key via `X-API-Key` header. If unset, all requests are allowed (dev mode).
+
+```bash
+export TRIAGE_API_KEY=your-secret-key
+curl -X POST http://localhost:8000/triage \
+  -H "X-API-Key: your-secret-key" \
+  -H "Content-Type: application/json" \
+  -d '...'
+```
+
 ## Docker
 
 ```bash
@@ -138,8 +162,8 @@ docker compose run test
 | Method | Path | Description |
 |--------|------|-------------|
 | `GET` | `/health` | Health check |
-| `POST` | `/triage` | Triage a single alert |
-| `POST` | `/triage/batch` | Triage up to 50 alerts |
+| `POST` | `/triage` | Triage a single alert (auth required) |
+| `POST` | `/triage/batch` | Triage up to 50 alerts, async with concurrency control (auth required) |
 
 ## Severity Mapping (MITRE ATT&CK Tactics)
 
@@ -153,7 +177,7 @@ docker compose run test
 ## Tech Stack
 
 - **LangGraph** — ReAct agent orchestration with tool calling
-- **Gemini 2.0 Flash** — LLM for alert analysis (via langchain-google-genai)
+- **Gemini 3.8 Flash** — LLM for alert analysis (via langchain-google-genai)
 - **FastAPI** — REST API with Pydantic validation
 - **Sigma Rules** — Detection rule matching for golden set construction
 - **OTRF Attack Logs** — Real Windows attack telemetry for evaluation
@@ -161,4 +185,3 @@ docker compose run test
 ## License
 
 MIT
-# soc-alert-traige-agent
