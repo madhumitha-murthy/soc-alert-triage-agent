@@ -1,0 +1,135 @@
+{
+  "total": 10,
+  "label_accuracy": 0.5,
+  "precision": 0.75,
+  "recall": 0.4286,
+  "f1": 0.5455,
+  "false_alarm_rate": 0.3333,
+  "severity_accuracy": 1.0,
+  "avg_latency_ms": 17024.1,
+  "p95_latency_ms": 41253.8,
+  "confusion_matrix": {
+    "true_positives": 3,
+    "false_positives": 1,
+    "true_negatives": 2,
+    "false_negatives": 4
+  },
+  "severity": {
+    "total": 3,
+    "correct": 3,
+    "accuracy": 1.0
+  },
+  "errors": 0,
+  "per_alert": [
+    {
+      "alert_id": "ALERT-0132",
+      "predicted_label": "benign",
+      "true_label": "malicious",
+      "predicted_severity": null,
+      "true_severity": "high",
+      "label_correct": false,
+      "severity_correct": null,
+      "confidence": 0.98,
+      "latency_ms": 17304.2
+    },
+    {
+      "alert_id": "ALERT-0133",
+      "predicted_label": "benign",
+      "true_label": "malicious",
+      "predicted_severity": null,
+      "true_severity": "high",
+      "label_correct": false,
+      "severity_correct": null,
+      "confidence": 0.99,
+      "latency_ms": 11019.5
+    },
+    {
+      "alert_id": "ALERT-0134",
+      "predicted_label": "benign",
+      "true_label": "malicious",
+      "predicted_severity": null,
+      "true_severity": "high",
+      "label_correct": false,
+      "severity_correct": null,
+      "confidence": 0.3,
+      "latency_ms": 41253.8
+    },
+    {
+      "alert_id": "ALERT-0139",
+      "predicted_label": "malicious",
+      "true_label": "malicious",
+      "predicted_severity": "high",
+      "true_severity": "high",
+      "label_correct": true,
+      "severity_correct": true,
+      "confidence": 0.99,
+      "latency_ms": 8351.2
+    },
+    {
+      "alert_id": "ALERT-0140",
+      "predicted_label": "malicious",
+      "true_label": "malicious",
+      "predicted_severity": "high",
+      "true_severity": "high",
+      "label_correct": true,
+      "severity_correct": true,
+      "confidence": 0.98,
+      "latency_ms": 10904.9
+    },
+    {
+      "alert_id": "ALERT-0141",
+      "predicted_label": "benign",
+      "true_label": "malicious",
+      "predicted_severity": null,
+      "true_severity": "high",
+      "label_correct": false,
+      "severity_correct": null,
+      "confidence": 0.95,
+      "latency_ms": 11999.9
+    },
+    {
+      "alert_id": "ALERT-0146",
+      "predicted_label": "malicious",
+      "true_label": "malicious",
+      "predicted_severity": "medium",
+      "true_severity": "medium",
+      "label_correct": true,
+      "severity_correct": true,
+      "confidence": 0.95,
+      "latency_ms": 13454.1
+    },
+    {
+      "alert_id": "ALERT-0130",
+      "predicted_label": "benign",
+      "true_label": "benign",
+      "predicted_severity": null,
+      "true_severity": null,
+      "label_correct": true,
+      "severity_correct": null,
+      "confidence": 0.95,
+      "latency_ms": 14187.4
+    },
+    {
+      "alert_id": "ALERT-0131",
+      "predicted_label": "benign",
+      "true_label": "benign",
+      "predicted_severity": null,
+      "true_severity": null,
+      "label_correct": true,
+      "severity_correct": null,
+      "confidence": 0.95,
+      "latency_ms": 12249.1
+    },
+    {
+      "alert_id": "ALERT-0135",
+      "predicted_label": "malicious",
+      "true_label": "benign",
+      "predicted_severity": "high",
+      "true_severity": null,
+      "label_correct": false,
+      "severity_correct": null,
+      "confidence": 0.9,
+      "latency_ms": 29516.8
+    }
+  ]
+}

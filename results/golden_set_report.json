@@ -1,0 +1,245 @@
+{
+  "total_alerts": 160,
+  "malicious_count": 32,
+  "benign_count": 128,
+  "excluded_uncertain": 5634,
+  "benign_malicious_ratio": 4.0,
+  "sigma_level_distribution": {
+    "malicious": {
+      "medium": 16,
+      "high": 10,
+      "critical": 3,
+      "low": 3
+    },
+    "benign": {
+      "critical": 3,
+      "high": 77,
+      "medium": 39,
+      "low": 9
+    }
+  },
+  "dev_test_split": {
+    "dev_recordings": [
+      "SDWIN-200904032946",
+      "SDWIN-200921175806",
+      "SDWIN-201022002145"
+    ],
+    "test_recordings": [
+      "SDWIN-190319020147",
+      "SDWIN-190319023812",
+      "SDWIN-190518182022",
+      "SDWIN-190518202151",
+      "SDWIN-190518210125",
+      "SDWIN-191027223020",
+      "SDWIN-200721232741",
+      "SDWIN-201017061100",
+      "SDWIN-201019224718",
+      "SDWIN-201021204544",
+      "SDWIN-201102041306"
+    ],
+    "dev_alert_count": 10,
+    "test_alert_count": 150
+  },
+  "per_source": {
+    "SDWIN-201102041306": {
+      "title": "PowerShell HTTP Listener",
+      "events": 110,
+      "malicious": 3,
+      "benign": 0,
+      "uncertain": 261,
+      "techniques": [
+        "T1059.001"
+      ]
+    },
+    "SDWIN-190518182022": {
+      "title": "Empire VBS Execution",
+      "events": 2067,
+      "malicious": 0,
+      "benign": 55,
+      "uncertain": 255,
+      "techniques": [
+        "T1059.005"
+      ]
+    },
+    "SDWIN-191027223020": {
+      "title": "Covenant ShellCmd InstallUtil",
+      "events": 1730,
+      "malicious": 0,
+      "benign": 36,
+      "uncertain": 252,
+      "techniques": [
+        "T1218.004"
+      ]
+    },
+    "SDWIN-190319023812": {
+      "title": "Empire Userland Registry Run Keys",
+      "events": 40569,
+      "malicious": 3,
+      "benign": 32,
+      "uncertain": 193,
+      "techniques": [
+        "T1547.001"
+      ]
+    },
+    "SDWIN-200921175806": {
+      "title": "Empire Elevated Scheduled Tasks",
+      "events": 59399,
+      "malicious": 3,
+      "benign": 3,
+      "uncertain": 368,
+      "techniques": [
+        "T1053.005"
+      ]
+    },
+    "SDWIN-201019224718": {
+      "title": "Logon Scripts via UserInitMprLogonScript",
+      "events": 122,
+      "malicious": 3,
+      "benign": 0,
+      "uncertain": 296,
+      "techniques": [
+        "T1037.001"
+      ]
+    },
+    "SDWIN-200904032946": {
+      "title": "Invoke BypassUAC FodHelper",
+      "events": 4139,
+      "malicious": 3,
+      "benign": 0,
+      "uncertain": 266,
+      "techniques": [
+        "T1548.002"
+      ]
+    },
+    "SDWIN-201021204544": {
+      "title": "Service Modification Fax",
+      "events": 437,
+      "malicious": 3,
+      "benign": 1,
+      "uncertain": 287,
+      "techniques": [
+        "T1543.003"
+      ]
+    },
+    "SDWIN-201022002145": {
+      "title": "HH Execution of Local Compiled HTML Payload",
+      "events": 1221,
+      "malicious": 1,
+      "benign": 0,
+      "uncertain": 301,
+      "techniques": [
+        "T1218.001"
+      ]
+    },
+    "SDWIN-201022022144": {
+      "title": "Mshta Javascript GetObject Sct",
+      "events": 1151,
+      "malicious": 0,
+      "benign": 0,
+      "uncertain": 303,
+      "techniques": [
+        "T1218.005"
+      ]
+    },
+    "SDWIN-200721232741": {
+      "title": "Empire Regsvr32 Execution",
+      "events": 2390,
+      "malicious": 3,
+      "benign": 0,
+      "uncertain": 304,
+      "techniques": [
+        "T1218.010"
+      ]
+    },
+    "SDWIN-201017061100": {
+      "title": "WMIC Remote XSL Jscript Execution",
+      "events": 1364,
+      "malicious": 1,
+      "benign": 0,
+      "uncertain": 298,
+      "techniques": [
+        "T1220"
+      ]
+    },
+    "SDWIN-190518202151": {
+      "title": "Empire Mimikatz LogonPasswords",
+      "events": 6026,
+      "malicious": 3,
+      "benign": 0,
+      "uncertain": 302,
+      "techniques": [
+        "T1003.001"
+      ]
+    },
+    "SDWIN-190625103712": {
+      "title": "Empire Mimikatz SAM Extract Hashes",
+      "events": 12349,
+      "malicious": 0,
+      "benign": 0,
+      "uncertain": 320,
+      "techniques": [
+        "T1003.002"
+      ]
+    },
+    "SDWIN-190301174830": {
+      "title": "Empire DCSync",
+      "events": 8465,
+      "malicious": 0,
+      "benign": 0,
+      "uncertain": 308,
+      "techniques": [
+        "T1003.006"
+      ]
+    },
+    "SDWIN-201018195009": {
+      "title": "Lsass Memory Dump via Comsvcs.dll",
+      "events": 184,
+      "malicious": 0,
+      "benign": 0,
+      "uncertain": 279,
+      "techniques": [
+        "T1003.001"
+      ]
+    },
+    "SDWIN-190319020147": {
+      "title": "Empire Net Local Administrators Group",
+      "events": 884,
+      "malicious": 3,
+      "benign": 0,
+      "uncertain": 296,
+      "techniques": [
+        "T1069.001"
+      ]
+    },
+    "SDWIN-201102163918": {
+      "title": "Seatbelt Group User Discovery",
+      "events": 451,
+      "malicious": 0,
+      "benign": 0,
+      "uncertain": 295,
+      "techniques": [
+        "T1012"
+      ]
+    },
+    "SDWIN-190518210125": {
+      "title": "Empire Invoke SMBExec",
+      "events": 7504,
+      "malicious": 3,
+      "benign": 1,
+      "uncertain": 314,
+      "techniques": [
+        "T1021.002"
+      ]
+    },
+    "SDWIN-200916232559": {
+      "title": "Mimikatz Netlogon Unauthenticated NetrServerAuthenticate2",
+      "events": 790,
+      "malicious": 0,
+      "benign": 0,
+      "uncertain": 136,
+      "techniques": [
+        "T1210"
+      ]
+    }
+  }
+}

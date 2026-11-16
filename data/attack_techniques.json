@@ -1,0 +1,176 @@
+{
+  "T1053": {
+    "name": "Scheduled Task/Job",
+    "tactic": "Persistence, Privilege Escalation, Execution",
+    "description": "Adversaries may abuse task scheduling to execute malicious code at system startup or on a scheduled basis for persistence.",
+    "severity": "high"
+  },
+  "T1053.005": {
+    "name": "Scheduled Task",
+    "tactic": "Persistence, Privilege Escalation, Execution",
+    "description": "Adversaries may abuse the Windows Task Scheduler to perform task scheduling for malicious code execution.",
+    "severity": "high"
+  },
+  "T1059": {
+    "name": "Command and Scripting Interpreter",
+    "tactic": "Execution",
+    "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries.",
+    "severity": "medium"
+  },
+  "T1059.001": {
+    "name": "PowerShell",
+    "tactic": "Execution",
+    "description": "Adversaries may abuse PowerShell commands and scripts for execution.",
+    "severity": "high"
+  },
+  "T1059.003": {
+    "name": "Windows Command Shell",
+    "tactic": "Execution",
+    "description": "Adversaries may abuse the Windows command shell (cmd.exe) for execution.",
+    "severity": "medium"
+  },
+  "T1059.005": {
+    "name": "Visual Basic",
+    "tactic": "Execution",
+    "description": "Adversaries may abuse Visual Basic (VBS) for execution via wscript/cscript.",
+    "severity": "medium"
+  },
+  "T1059.007": {
+    "name": "JavaScript",
+    "tactic": "Execution",
+    "description": "Adversaries may abuse JavaScript for execution via mshta, wscript, or browsers.",
+    "severity": "medium"
+  },
+  "T1003": {
+    "name": "OS Credential Dumping",
+    "tactic": "Credential Access",
+    "description": "Adversaries may attempt to dump credentials from the OS to obtain account login information.",
+    "severity": "critical"
+  },
+  "T1003.001": {
+    "name": "LSASS Memory",
+    "tactic": "Credential Access",
+    "description": "Adversaries may attempt to access credential material stored in the process memory of LSASS.",
+    "severity": "critical"
+  },
+  "T1003.002": {
+    "name": "Security Account Manager",
+    "tactic": "Credential Access",
+    "description": "Adversaries may attempt to extract credential material from the SAM database.",
+    "severity": "critical"
+  },
+  "T1003.006": {
+    "name": "DCSync",
+    "tactic": "Credential Access",
+    "description": "Adversaries may attempt to access credentials via domain replication service (DCSync attack).",
+    "severity": "critical"
+  },
+  "T1547": {
+    "name": "Boot or Logon Autostart Execution",
+    "tactic": "Persistence, Privilege Escalation",
+    "description": "Adversaries may configure system settings to automatically execute a program during system boot or logon.",
+    "severity": "high"
+  },
+  "T1547.001": {
+    "name": "Registry Run Keys / Startup Folder",
+    "tactic": "Persistence, Privilege Escalation",
+    "description": "Adversaries may achieve persistence by adding a program to a startup folder or referencing it with a Registry run key.",
+    "severity": "high"
+  },
+  "T1218": {
+    "name": "System Binary Proxy Execution",
+    "tactic": "Defense Evasion",
+    "description": "Adversaries may bypass process/signature-based defenses by proxying execution of malicious content with signed binaries.",
+    "severity": "medium"
+  },
+  "T1218.005": {
+    "name": "Mshta",
+    "tactic": "Defense Evasion",
+    "description": "Adversaries may abuse mshta.exe to proxy execution of malicious .hta files and JavaScript/VBScript.",
+    "severity": "high"
+  },
+  "T1218.010": {
+    "name": "Regsvr32",
+    "tactic": "Defense Evasion",
+    "description": "Adversaries may abuse Regsvr32.exe to proxy execution of malicious code via COM scriptlets.",
+    "severity": "high"
+  },
+  "T1218.011": {
+    "name": "Rundll32",
+    "tactic": "Defense Evasion",
+    "description": "Adversaries may abuse rundll32.exe to proxy execution of malicious code.",
+    "severity": "medium"
+  },
+  "T1569": {
+    "name": "System Services",
+    "tactic": "Execution",
+    "description": "Adversaries may abuse system services or daemons to execute commands or programs.",
+    "severity": "medium"
+  },
+  "T1569.002": {
+    "name": "Service Execution",
+    "tactic": "Execution",
+    "description": "Adversaries may abuse the Windows service control manager to execute malicious commands or payloads.",
+    "severity": "high"
+  },
+  "T1021": {
+    "name": "Remote Services",
+    "tactic": "Lateral Movement",
+    "description": "Adversaries may use valid accounts to log into a service for remote access.",
+    "severity": "high"
+  },
+  "T1021.002": {
+    "name": "SMB/Windows Admin Shares",
+    "tactic": "Lateral Movement",
+    "description": "Adversaries may use SMB to interact with or move laterally to a remote network share.",
+    "severity": "high"
+  },
+  "T1548": {
+    "name": "Abuse Elevation Control Mechanism",
+    "tactic": "Privilege Escalation, Defense Evasion",
+    "description": "Adversaries may circumvent mechanisms designed to control elevated privileges to gain higher-level permissions.",
+    "severity": "high"
+  },
+  "T1548.002": {
+    "name": "Bypass User Account Control",
+    "tactic": "Privilege Escalation, Defense Evasion",
+    "description": "Adversaries may bypass UAC mechanisms to elevate process privileges on a system.",
+    "severity": "high"
+  },
+  "T1087": {
+    "name": "Account Discovery",
+    "tactic": "Discovery",
+    "description": "Adversaries may attempt to get a listing of accounts on a system or within an environment.",
+    "severity": "low"
+  },
+  "T1016": {
+    "name": "System Network Configuration Discovery",
+    "tactic": "Discovery",
+    "description": "Adversaries may look for details about the network configuration and settings of systems they access.",
+    "severity": "low"
+  },
+  "T1069": {
+    "name": "Permission Groups Discovery",
+    "tactic": "Discovery",
+    "description": "Adversaries may attempt to discover group and permission settings.",
+    "severity": "low"
+  },
+  "T1068": {
+    "name": "Exploitation for Privilege Escalation",
+    "tactic": "Privilege Escalation",
+    "description": "Adversaries may exploit software vulnerabilities to elevate privileges.",
+    "severity": "critical"
+  },
+  "T1210": {
+    "name": "Exploitation of Remote Services",
+    "tactic": "Lateral Movement",
+    "description": "Adversaries may exploit remote services to gain unauthorized access to internal systems.",
+    "severity": "critical"
+  },
+  "T1558": {
+    "name": "Steal or Forge Kerberos Tickets",
+    "tactic": "Credential Access",
+    "description": "Adversaries may attempt to subvert Kerberos authentication for credential access.",
+    "severity": "critical"
+  }
+}
